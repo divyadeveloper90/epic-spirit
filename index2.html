@@ -3,67 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Epic Travel - Your gateway to unforgettable travel experiences.">
     <title>Epic Spirit</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style2.css">
 </head>
 <body>
+    <!-- Bootstrap 5 JS (Make sure jQuery is included for older Bootstrap versions) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
     <!-- Navigation Menu -->
-    <header>
-        <nav>
-            <ul id="menu">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Morocco">Morocco</a></li>
-                <li><a href="#Portugal">Portugal</a></li>
-                <li><a href="#The Island">The Island</a></li>
-                <li><a href="#Epic Journal">Epic Journal</a></li>
-                <li><a href="#Plan my Trip">Plan my Trip</a></li>
-            </ul>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/epic.spirit.bk.webp" alt="Epic" class="d-inline-block align-top" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Morocco</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Portugal</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">The Island</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Epic Journal</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Plan My Trip</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-
     <!-- Welcome Section -->
-    <section id="welcome">
-        <h1 class="section-heading">Epic Spirit</h1>
-        <div class="content">
-            <p>Welcome to Epic Spirit, your gateway to unforgettable travel experiences. From breathtaking landscapes to enriching cultures, we are here to make your adventures extraordinary.</p>
+<section id="welcome" class="full-height d-flex align-items-center text-center position-relative">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center flex-column text-center">
+                <h6 class="fw-bold">CREATIVE & FRIENDLY<br> APPROACH</h6>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center flex-column text-center">
+                <h6>Underpin our promise to help</h6>
+                <p>PEOPLE to do more<br> and BE MORE through TRAVEL.</p>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center flex-column text-center">
+                <h6>IT'S THE PEOPLE THAT<br> make Epic what it is</h6>
+                <p>Life is about EXPERIENCES.</p>
+            </div>
         </div>
-        <div class="epic-background">
-            <img src="./assets/img/Team.Epic6.jpg" alt="Epic Spirit Background" />
+        
+        <div class="row mt-1">
+            <div class="col-md-6 d-flex justify-content-center flex-column text-center">
+                <h6>EPIC is a name<br> that guarantees</h6>
+                <p>RESPECT, LUXURIOUS <br>care, and WARMTH.</p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center flex-column text-center">
+                <h6>Travel can help you</h6>
+                <p>not just to do<br> more, but BE MORE.</p>
+            </div>
         </div>
-    </section>
+
+        <div class="row mt-1">
+            <div class="col-12 d-flex justify-content-center flex-column text-center">
+                <h6 class="fw-bold">Our mission is to<br> create unforgettable<br> travel experiences.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Epic Spirit Text Positioned at the Bottom -->
+    <div class="epic-spirit position-absolute bottom-0 w-100 text-center pb-4">
+        <h1 class="display-2 epic-title text-yellow">Epic Spirit</h1>
+    </div>
+
+    <!-- Background Image -->
+    <div class="epic-background position-absolute top-0 start-0 w-100 h-100">
+        <img src="./assets/img/EpicSpiritfinal.jpg" alt="Epic Spirit Background" class="img-fluid w-100 h-100 object-fit-cover">
+    </div>
+</section>
+
+
+    <!-- Full Width Image Section -->
+   
+  
+
+
+
 
     <!-- Founded Section -->
-    <section id="founded">
-        <h2 class="section-heading">Founded</h2>
-        <div class="content">
-            <p>Epic Spirit was born with a mission to make every travel experience unforgettable. Since our inception, we have been driven by passion, adventure, and the desire to create moments that last forever.</p>
-        </div>
-        <div class="founded-background">
-            <img src="./assets/img/Team.Epic4.jpg" alt="Founded Background">
-        </div>
-    </section>
+    <section id="founded" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-left">
+                    <h2>Founded</h2>
+                </div>
+               
+                <div class="col-md-4 text-start">
+                    <h3>Born to be Epic</h3>
+                </div>
+            </div>
+        
+            <div class="row mt-2">
+             
+              
+                    <h6>
+                        Founded by global adventurer Charlie Shepherd in Morocco in 2005, and co-owned by international hotelier and action woman, Carla Petzold-Back, Epic 
+                        exists to deliver premium on-the-ground travel experiences in countries where our team lives and works.
+                    </h6>
+                    <div class="col-md-12 text-center">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="./assets/img/Team.Epic1.jpg" alt="Image 1" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="./assets/img/Team.Epic2.jpg" alt="Image 2" class="img-fluid rounded">
+                            </div>
+                        
+                        </div>
+                </div>
+            </div>
 
-    <!-- Reliability Section -->
-    <section id="reliability">
-        <h2 class="section-heading">Reliability</h2>
-        <div class="content">
-            <p>At Epic Spirit, reliability is at the heart of what we do. With a trusted team of professionals and years of experience, we ensure every journey is safe, smooth, and full of adventure.</p>
-        </div>
-        <div class="reliability-background">
-            <img src="./assets/img/reliability.epic.avif" alt="Reliability Background">
-        </div>
-    </section>
+            <div class="row mt-4 justify-content-end">
+                <div class="col-md-6 end" style="margin-top: -60">
+               
+                    <p>
+                        
+                        We consider ourselves a rare breed, possessing not only the 
+                        skills to create exciting travel designs, but also having solid
+                        and experienced on-the-ground operational know-how. We
+                        know that expectations are not only met,but brilliantly exceeded.
+                    </p>
+                    <p>Charlie has 25 years of experience in the travel industry,
+                        across three continents and his passion and expertise has
+                         been the driving for e brhind Epic for 15 years.
+                    </p>
+        
+                    <div class="col-md-12">
+                        <img src="./assets/img/Team.Epic3.jpg" alt="Image 3" class="img-fluid rounded">
+                    </div>
+                <//div>
+            </div>
 
-    <!-- Team Section -->
-    <section id="team">
-        <h2 class="section-heading">Epic People</h2>
-        <div class="content">
-            <p>Meet the passionate and dedicated team behind Epic Spirit. With diverse backgrounds and expertise, we work together to bring your dream adventures to life.</p>
+<!-- Row for Circular Image -->
+<div class="row mt-2 justify-content-center">
+    <div class="col-md-12 col-sm-12 text-center">
+        <div class="border-circle position-relative large-circle">
+            <img src="./assets/img/foundedimageCircle.jpg" class="rounded-circle"/>
+                
+                
+
+            <!-- Centered Quote Inside the Circle -->
+            <div class="position-absolute top-40 start-50 translate-middle-x text-white text-center w-75">
+                <h1 class="circle-text">
+                    <div class="col-md-12 start">
+                    "Travel Experiences Are The Best Way Known To Man To
+                    Reconnect With Oneself, With Places, And With Nature 
+                    And The World Around Us. Epic Is Luxury Redefined"
+                </h1>
+            </div>
+
+            <!-- Founder’s Name Positioned Slightly Above Bottom -->
+            <div class="position-absolute bottom-10 start-50 translate-middle-x text-white founder-text">
+                <h6>Charlie Shepherd<br>Founder, Epic</h6>
+            </div>
         </div>
-        <div class="team-background">
-            <img src="./assets/img/team.Epic.collage.jpg" alt="Team Background">
+    </div>
+</div>
+
+
+   
+<!-- Reliability Section --> 
+
+<section id="reliability" class="my-5">
+    <div class="container">
+        <div class="row">
+            <!-- Left-Aligned Heading -->
+            <div class="col-md-4 text-left">
+                <h2>RELIABILITY</h2>
+            </div>
+
+            <!-- Right-Aligned Subheading -->
+            <div class="col-md-6 offset-md-2 text-right">
+                <h3>RELIABILITY AND FLAIR</h3>
+            </div>
         </div>
-    </section>
+
+        <div class="row mt-2">
+            <div class="col-md-10 text-start">
+                <p>
+                    Small enough to care, but big enough to produce
+                    magical results. The Epic family is a mix of international and local staff, 
+                    all in the Epic mould to ensure our guests get the best experience
+                </p>
+            </div>
+           
+        </div>
+
+        <section class="container">
+            <!-- First Row: 4 Images Left | 3 Text Sections Right -->
+            <div class="row mt-3">
+                <!-- Left Side: 4 Images -->
+                <div class="col-md-4 d-flex flex-wrap">
+                    <div class="col-6">
+                        <div class="image-box">
+                            <img src="/assets/img/realbox1.jpg" alt="Image 1" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-box">
+                            <img src="/assets/img/realbox2.webp" alt="Image 2" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-box border rounded bg-light d-flex align-items-center justify-content-center" style="height: 100px;">
+                            <span class="text-muted"></span>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-3">
+                        <div class="image-box">
+                            <img src="/assets/img/realbox3.jpg" alt="Image 3" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="col-6 mt-3">
+                        <div class="image-box">
+                            <img src="/assets/img/realbox4.jpg" alt="Image 4" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Three Text Sections on Right -->
+                <div class="col-md-6 d-flex justify-content-start">
+                    <div class="col-md-5 vertical-line">
+                        <h6>A COMMON ETHOS</h6>
+                        <p>We are a dedicated, culturally diverse team of experienced travel planners and organizers, all of us passionate about travel and looking after people.</p>
+                    </div>
+                    <div class="col-md-5 vertical-line">
+                        <h6>FOCUS ON THE HUMAN TOUCH</h6>
+                        <p>We stand apart for our human communication in a digital world, and it's that which gets us to the heart of your requirements, aspirations, and hopes.</p>
+                    </div>
+                    <div class="col-md-5 vertical-line">
+                        <h6>ON THE GROUND EXPERTISE</h6>
+                        <p>Our people know the best places to stay, the best transport solutions, the latest new and unique experiences, and the best people to engage with.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Second Row: 4 Images Left | 2 Text Sections Right -->
+            <div class="row mt-3">
+                <!-- Left Side: 4 More Images -->
+                <div class="col-md-4 d-flex flex-wrap">
+                    <div class="col-4">
+                        <div class="image-box">
+                            <img src="/assets/img/realbox5.jpg" alt="Image 5" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="image-box">
+                            <img src="/assets/img/realbox6.jpg" alt="Image 6" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <class class="col-6">
+                        <div class="image-box border rounded bg-light d-flex align-items-center justify-content-center" style="height: 100px;">
+                            <span class="text-muted"></span>
+                        </div>
+                   
+                  
+                    <div class="col-6 ">
+                        <div class="image-box">
+                            <img src="/assets/img/realbox8.jpg" alt="Image 8" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Two Text Sections on Right -->
+                <div class="col-md-8 d-flex justify-content-start">
+                    <div class="col-md-5 vertical-line">
+                        <h6>SEAMLESS EXPERIENCE</h6>
+                        <p>We take care of all the booking and pre-alignment of stays with your individual requirements. Simply put—you sit back and we do the rest.</p>
+                    </div>
+                    <div class="col-md-5 vertical-line ms-3">
+                        <h6>A VALUED AND VALUABLE SERVICE</h6>
+                        <p>Our suppliers are committed to providing an epic level of service built through an understanding over years of what works for our clients.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Third Row: 4 More Images (Total 12) -->
+          <div class="row mt-3">
+
+
+
+          
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compact Image Slider with Pop-Out</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Slider Container */
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Image Slider */
+        .slider {
+            display: flex;
+            gap: 8px;
+            padding: 8px;
+            scroll-behavior: smooth;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slider-item {
+            position: relative;
+            width: 180px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Pop-Out Effect on Hover */
+        .slider-item:hover {
+            transform: scale(1.3);
+            z-index: 10;
+        }
+
+        .slider-item:hover img {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Navigation Buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .prev { left: 5px; }
+        .next { right: 5px; }
+    </style>
+</head>
+<body>
+
+<!-- Team Section -->
+<section id="team" class="my-5">
+    <div class="container">
+        <h4 style="text-align:left;">TEAM</h4>
+        <h2 style="text-align:center;">EPIC PEOPLE</h2>
+        
+        <div class="slider-container">
+            <button class="prev">&#10094;</button>
+            <div class="slider">
+                <div class="slider-item"><img src="./assets/img/teampic1.jpg" alt="Image 1"></div>
+                <div class="slider-item"><img src="./assets/img/teampic2.jpg" alt="Image 2"></div>
+                <div class="slider-item"><img src="./assets/img/teampic4.jpg" alt="Image 3"></div>
+                <div class="slider-item"><img src="./assets/img/teampic5.jpg" alt="Image 4"></div>
+                <div class="slider-item"><img src="./assets/img/realbox6.jpg" alt="Image 5"></div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+        const scrollStep = 200;
+
+        // Button Navigation
+        prevBtn.addEventListener("click", function () {
+            slider.scrollBy({ left: -scrollStep, behavior: "smooth" });
+        });
+
+        nextBtn.addEventListener("click", function () {
+            slider.scrollBy({ left: scrollStep, behavior: "smooth" });
+        });
+    });
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

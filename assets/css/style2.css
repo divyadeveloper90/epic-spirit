@@ -1,91 +1,440 @@
-/* General Reset */
-body, html {
-    margin: 0;
-    padding: 0;
+/* General Styling */
+body {
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
+    background-color: #f8f9fa;
+  
+
+/* Ensure the navigation menu is at the top */
+
+
+
+/* Logo */
+.logo {
+    height: 50px;
+    width: auto;
 }
 
-h1, h2 {
-    margin: 0;
-    color: #333;
+/* Background Image Styling */
+.epic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.epic-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.epic-title {
+    color: #3e3c2c; /* Gold yellow */
+}
+
+
+/* Full Height Sections */
+.full-height {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Text Styling */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 p {
-    color: #555;
-    line-height: 1.6;
+    font-size: 18px;
 }
 
-/* Navigation Menu */
-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
+/* Style for the menu items */
 #menu {
     list-style: none;
     display: flex;
-    gap: 15px; /* Space between menu items */
-    margin: 0;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 20px; /* Space between menu items */
+    margin: 10;
     padding: 0;
 }
 
-#menu li {
-    display: inline-block;
-}
-
 #menu li a {
-    color: white;
+    color: rgb(228, 66, 66);
     text-decoration: none;
+    font-size: 14px;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 #menu li a:hover {
-    color: #ffcc00;
+    color: #efba1c; /* Golden-yellow on hover */
+
+}
+/* Center the entire section */
+#Founded {
+    padding: 80px 0;
 }
 
-/* Section Styling */
-section {
-    padding: 100px 20px; /* Space between sections */
+/* Center the entire section */
+#Founded {
+    padding: 50px 0;
+}
+
+
+/* Circle Image Wrapper */
+.border-circle {
+    width: 1000px; /* Adjust size */
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Ensure Image Fills Circle */
+.border-circle img {
+    width: 00%;
+    height: 400%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Text Overlay Inside the Circle */
+.circle-text {
+    position: absolute;
+    bottom: 15px; /* Adjust placement */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Styling for Quote Below Image */
+.quote-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .border-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .quote-text {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .border-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    h1.display-12 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .border-circle {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #000; /* Adjust thickness for smaller screens */
+    }
+}
+
+
+/* Ensure Image Fills the Border */
+.border-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .border-circle {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #000; /* Adjust thickness for smaller screens */
+    }
+}
+
+
+@media (max-width: 768px) {
+    #founded .row:first-child {
+        text-align: center;
+    }
+}
+
+
+
+/* Full Width Image Section */
+#full-width-image .container-fluid {
+    padding: 0;
+}
+
+#full-width-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Welcome Section */
+#welcome {
+    position: relative; /* Establish stacking context for the section */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
 }
 
+#welcome .epic-background {
+    position: absolute; /* Allows the image to cover the section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Sends the image behind the content */
+    overflow: hidden;
+}
+
+#welcome .epic-background img {
+    width: 100%; /* Make the image cover the width */
+    height: 100%; /* Make the image cover the height */
+    object-fit: cover; /* Ensures the image scales nicely */
+}
+
 .section-heading {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: left;
-    padding-left: 20px;
+    margin-top: 80px; /* Add margin to avoid overlapping with the menu */
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.epic-title {
+    position: absolute;
+    bottom: 8%;  /* Moves it near the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Optional: Make text more visible */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Optional: Better readability */
 }
 
 .content {
-    max-width: 800px;
-    margin: 0 auto;
+    margin-top: 20px;
     padding: 20px;
+    font-size: 12px;
+    line-height: .5;
+    
 }
 
-/* Background Images */
-.epic-background, .founded-background, .reliability-background, .team-background {
-    margin-top: 30px;
+.border-circle {
+    width: 500;  /* Adjust size as needed */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-center;
+    position: relative;
 }
 
-.epic-background img, 
-.founded-background img, 
-.reliability-background img, 
-.team-background img {
+.circle-text {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.founder-text {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.top-40 {
+    top: 40% !important;  /* Moves the quote text higher */
+}
+
+.bottom-10 {
+    bottom: 10% !important; /* Moves the founder's name slightly up */
+}
+
+
+/* Reliability Section Styling */
+.image-box {
+    height: px; /* Fixed height for consistency */
+    background-color: #f8f9fa; /* Light gray background */
+    border: 2px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.image-box:hover {
+    background-color: #e9ecef; /* Slightly darker on hover */
+    border-color: #bbb;
+}
+
+/* Text inside empty image boxes */
+.image-box p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6c757d;
+    margin: 0;
+}
+.vertical-line {
+    border-left: 3px solid #000; /* Adjust color and thickness */
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.vertical-line h6 {
+    margin-bottom: auto; /* Moves heading to the top */
+}
+
+.vertical-line p {
+    margin-top: auto; /* Moves paragraph to the bottom */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .image-box {
+        height: 150px; /* Reduce height for smaller screens */
+    }
+}
+
+
+/* Responsive Fixes */
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu li {
+        margin-bottom: 10px;
+    }
+}/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Team Section Styling */
+#team {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Headings */
+#team h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+#team h3 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #666;
+}
+
+/* Carousel Styling */
+#teamCarousel {
+    max-width: 800px; /* Limit carousel width */
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Images */
+#teamCarousel .carousel-item img {
     width: 100%;
-    height: auto;
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures proper scaling */
     border-radius: 10px;
 }
 
-/* Media Queries for Responsiveness */
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(100%); /* Makes arrows visible on dark images */
+}
+
+/* Carousel Indicators */
+.carousel-indicators li {
+    background-color: #333;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.carousel-indicators .active {
+    background-color: #fbbd08; /* Highlight active dot */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    #menu {
-        flex-wrap: wrap; /* Adjust menu for smaller screens */
+    #team h2 {
+        font-size: 28px;
+    }
+
+    #team h3 {
+        font-size: 20px;
+    }
+
+    #teamCarousel .carousel-item img {
+        height: 300px; /* Adjust image height for smaller screens */
     }
 }
+
