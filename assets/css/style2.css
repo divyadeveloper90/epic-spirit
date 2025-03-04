@@ -483,6 +483,66 @@ body {
         height: 300px; /* Adjust image height for smaller screens */
     }
 }
+/* Styling for the Team Section */
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%; /* Adjust for the number of images */
+}
+
+.slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 
 /* Footer Styles */

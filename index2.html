@@ -2,14 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Epic Travel - Your gateway to unforgettable travel experiences.">
     <title>Epic Spirit</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="media-queries.css">
     <style>
-        /* Slider Container */
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .navbar-nav .nav-item .nav-link {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Responsive Image Slider */
         .slider-container {
             position: relative;
             overflow: hidden;
@@ -17,60 +34,60 @@
             padding: 10px 0;
             text-align: center;
         }
-
-        /* Image Slider */
         .slider {
             display: flex;
             gap: 8px;
             padding: 8px;
             scroll-behavior: smooth;
-            transition: transform 0.3s ease-in-out;
         }
-
         .slider-item {
-            position: relative;
             width: 180px;
             height: 120px;
-            overflow: hidden;
             border-radius: 8px;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-
         .slider-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
         }
-
-        /* Pop-Out Effect on Hover */
         .slider-item:hover {
             transform: scale(1.3);
             z-index: 10;
         }
 
-        .slider-item:hover img {
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        /* Welcome Section */
+        .full-height {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+        .epic-title {
+            font-size: 3rem;
+            color: #FFC107;
         }
 
-        /* Navigation Buttons */
-        .prev, .next {
+        /* Background Image */
+        .epic-background img {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            padding: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 5px;
-            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
-        .prev { left: 5px; }
-        .next { right: 5px; }
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .epic-title {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,7 +97,7 @@
     <!-- Navigation Menu -->
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
+            <div class="container-lg">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -101,7 +118,7 @@
     </header>
     <!-- Welcome Section -->
 <section id="welcome" class="full-height d-flex align-items-center text-center position-relative">
-    <div class="container mt-5">
+    <div class="container-lg mt-5">
         <div class="row">
             <div class="col-md-4 d-flex justify-content-center flex-column text-center">
                 <h6 class="fw-bold">CREATIVE & FRIENDLY<br> APPROACH</h6>
@@ -153,465 +170,359 @@
 
 
 
-    <!-- Founded Section -->
-    <section id="founded" class="my-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-left">
-                    <h2>Founded</h2>
-                </div>
-                <div class="col-md-4 text-start">
-                    <h3>Born to be Epic</h3>
-                </div>
+ <!-- Founded Section -->
+<section id="founded" class="my-5">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-md-4 col-12 text-md-left text-center">
+                <h2>Founded</h2>
             </div>
-    
-            <div class="row mt-2">
-                <h6>
+            <div class="col-md-4 col-12 text-md-start text-center">
+                <h3>Born to be Epic</h3>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-12">
+                <h6 class="text-center text-md-start">
                     Founded by global adventurer Charlie Shepherd in Morocco in 2005, and co-owned by international hotelier and action woman, Carla Petzold-Back, 
                     Epic exists to deliver premium on-the-ground travel experiences in countries where our team lives and works.
                 </h6>
-                <div class="col-md-12 text-center">
-                    <div class="row justify-content-center">
-                        <!-- First Image -->
-                        <div class="col-md-3">
-                            <img src="./assets/img/Team.Epic1.jpg" alt="Image 1" class="img-fluid rounded">
-                        </div>
-                        <!-- Second Image -->
-                        <div class="col-md-3">
-                            <img src="./assets/img/Team.Epic2.jpg" alt="Image 2" class="img-fluid rounded">
-                        </div>
-                        <!-- Text Block -->
-                        <div class="col-md-4 d-flex flex-column align-items-start">
-                            <p>
-                                We consider ourselves a rare breed, possessing not only the 
-                                skills to create exciting travel designs but also solid,
-                                on-the-ground operational expertise. We ensure that expectations
-                                are not just met but brilliantly exceeded.
-                            </p>
-                            <p>
-                                Charlie has 25 years of experience in the travel industry
-                                across three continents. His passion and expertise have
-                                been the driving force behind Epic for 15 years.
-                            </p>
-                        </div>
+            </div>
+
+            <!-- Images and Text Block -->
+            <div class="col-12">
+                <div class="row justify-content-center align-items-center">
+                    <!-- First Image -->
+                    <div class="col-md-3 col-sm-6 col-10 my-2">
+                        <img src="./assets/img/Team.Epic1.jpg" alt="Image 1" class="img-fluid rounded w-100">
+                    </div>
+                    <!-- Second Image -->
+                    <div class="col-md-3 col-sm-6 col-10 my-2">
+                        <img src="./assets/img/Team.Epic2.jpg" alt="Image 2" class="img-fluid rounded w-100">
+                    </div>
+                    <!-- Text Block -->
+                    <div class="col-md-4 col-12 text-center text-md-start my-2">
+                        <p>
+                            We consider ourselves a rare breed, possessing not only the 
+                            skills to create exciting travel designs but also solid,
+                            on-the-ground operational expertise. We ensure that expectations
+                            are not just met but brilliantly exceeded.
+                        </p>
+                        <p>
+                            Charlie has 25 years of experience in the travel industry
+                            across three continents. His passion and expertise have
+                            been the driving force behind Epic for 15 years.
+                        </p>
                     </div>
                 </div>
             </div>
-    
-            <!-- Image 3 (Move to the Right) -->
-            <div class="row mt-4">
-                <div class="col-md-12"> 
-                <div class="col-md-11 d-flex justify-content-end">
-                    <img src="./assets/img/Team.Epic3.jpg" alt="Image 3" class="img-fluid rounded">
-                </div>
+        </div>
+
+        <!-- Image 3 (Right-Aligned on Larger Screens) -->
+        <div class="row mt-4">
+            <div class="col-12 d-flex justify-content-center justify-content-md-end">
+                <img src="./assets/img/Team.Epic3.jpg" alt="Image 3" class="img-fluid rounded w-75 w-md-50">
             </div>
         </div>
-    </section>
-    
-    <!-- Row for Circular Image -->
-    <div class="row mt-2 justify-content-center">
+    </div>
+</section>
+
+<!-- Row for Circular Image -->
+<div class="container">
+    <div class="row mt-4 justify-content-center">
         <div class="col-md-10 col-sm-12 text-center">
-            <div class="border-circle position-relative large-circle">
-                <img src="./assets/img/foundedimageCircle.jpg" class="rounded-circle"/>
-    
+            <div class="border-circle position-relative large-circle mx-auto" style="max-width: 400px;">
+                <img src="./assets/img/foundedimageCircle.jpg" class="rounded-circle w-100"/>
+
                 <!-- Centered Quote Inside the Circle -->
                 <div class="position-absolute top-50 start-50 translate-middle text-white text-center w-75">
-                    <h1 class="circle-text">
+                    <h5 class="circle-text">
                         "Travel Experiences Are The Best Way Known To Man To 
                         Reconnect With Oneself, With Places, And With Nature 
                         And The World Around Us. Epic Is Luxury Redefined"
-                    </h1>
+                    </h5>
                 </div>
-    
+
                 <!-- Founder’s Name Positioned Slightly Above Bottom -->
-                <div class="position-absolute bottom-0 start-50 translate-middle-x text-white founder-text">
+                <div class="position-absolute bottom-0 start-50 translate-middle-x text-white founder-text pb-2">
                     <h6>Charlie Shepherd<br>Founder, Epic</h6>
                 </div>
             </div>
         </div>
     </div>
-    
+</div>
+  
 
    
-<!-- Reliability Section --> 
 
-<section id="reliability" class="my-5">
-    <div class="container">
-        <div class="row">
-            <!-- Left-Aligned Heading -->
-            <div class="col-md-4 text-left">
-                <h2>RELIABILITY</h2>
-            </div>
-
-            <!-- Right-Aligned Subheading -->
-            <div class="col-md-6 offset-md-2 text-right">
-                <h3>RELIABILITY AND FLAIR</h3>
-            </div>
-        </div>
-
-        <div class="row mt-2">
-            <div class="col-md-10 text-start">
-                <p>
-                    Small enough to care, but big enough to produce
-                    magical results. The Epic family is a mix of international and local staff, 
-                    all in the Epic mould to ensure our guests get the best experience
-                </p>
-            </div>
-           
-        </div>
-
-        <section class="container">
-            <!-- First Row: 4 Images Left | 3 Text Sections Right -->
-            <div class="row mt-3">
-                <!-- Left Side: 4 Images -->
-                <div class="col-md-4 d-flex flex-wrap">
-                    <div class="col-6">
-                        <div class="image-box">
-                            <img src="/assets/img/realbox1.jpg" alt="Image 1" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="image-box">
-                            <img src="/assets/img/realbox2.webp" alt="Image 2" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="image-box border rounded bg-light d-flex align-items-center justify-content-center" style="height: 100px;">
-                            <span class="text-muted"></span>
-                        </div>
-                    </div>
-                    <div class="col-6 mt-3">
-                        <div class="image-box">
-                            <img src="/assets/img/realbox3.jpg" alt="Image 3" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-6 mt-3">
-                        <div class="image-box">
-                            <img src="/assets/img/realbox4.jpg" alt="Image 4" class="img-fluid rounded">
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Three Text Sections on Right -->
-                <div class="col-md-6 d-flex justify-content-start">
-                    <div class="col-md-5 vertical-line">
-                        <h6>A COMMON ETHOS</h6>
-                        <p>We are a dedicated, culturally diverse team of experienced travel planners and organizers, all of us passionate about travel and looking after people.</p>
-                    </div>
-                    <div class="col-md-5 vertical-line">
-                        <h6>FOCUS ON THE HUMAN TOUCH</h6>
-                        <p>We stand apart for our human communication in a digital world, and it's that which gets us to the heart of your requirements, aspirations, and hopes.</p>
-                    </div>
-                    <div class="col-md-5 vertical-line">
-                        <h6>ON THE GROUND EXPERTISE</h6>
-                        <p>Our people know the best places to stay, the best transport solutions, the latest new and unique experiences, and the best people to engage with.</p>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Second Row: 4 Images Left | 2 Text Sections Right -->
-            <div class="row mt-3">
-                <!-- Left Side: 4 More Images -->
-                <div class="col-md-4 d-flex flex-wrap">
-                    <div class="col-4">
-                        <div class="image-box">
-                            <img src="/assets/img/realbox5.jpg" alt="Image 5" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="image-box">
-                            <img src="/assets/img/realbox6.jpg" alt="Image 6" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <class class="col-6">
-                        <div class="image-box border rounded bg-light d-flex align-items-center justify-content-center" style="height: 100px;">
-                            <span class="text-muted"></span>
-                        </div>
-                   
-                  
-                    <div class="col-6 ">
-                        <div class="image-box">
-                            <img src="/assets/img/realbox8.jpg" alt="Image 8" class="img-fluid rounded">
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Two Text Sections on Right -->
-                <div class="col-md-8 d-flex justify-content-start">
-                    <div class="col-md-5 vertical-line">
-                        <h6>SEAMLESS EXPERIENCE</h6>
-                        <p>We take care of all the booking and pre-alignment of stays with your individual requirements. Simply put—you sit back and we do the rest.</p>
-                    </div>
-                    <div class="col-md-5 vertical-line ms-3">
-                        <h6>A VALUED AND VALUABLE SERVICE</h6>
-                        <p>Our suppliers are committed to providing an epic level of service built through an understanding over years of what works for our clients.</p>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Third Row: 4 More Images (Total 12) -->
-          <div class="row mt-3">
-
-            
-                <style>
-                    /* Slider Container */
-                    .slider-container {
-                        position: relative;
-                        width: 100%;
-                        overflow: hidden;
-                        padding: 20px 0;
-                        text-align: center;
-                    }
-            
-                    /* Image Slider */
-                    .slider-wrapper {
-                        display: flex;
-                        align-items: center;
-                        position: relative;
-                        max-width: 80%;
-                        margin: auto;
-                    }
-            
-                    .slider {
-                        display: flex;
-                        gap: 10px;
-                        padding: 10px;
-                        overflow: hidden;
-                        scroll-behavior: smooth;
-                        width: 100%;
-                    }
-            
-                    .slider-item {
-                        flex: 0 0 auto;
-                        width: 180px;
-                        height: 120px;
-                        overflow: hidden;
-                        border-radius: 10px;
-                        cursor: pointer;
-                        transition: transform 0.3s ease;
-                    }
-            
-                    .slider-item img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        transition: transform 0.3s ease;
-                    }
-            
-                    /* Hover Effect */
-                    .slider-item:hover {
-                        transform: scale(1.2);
-                        z-index: 10;
-                    }
-            
-                    .slider-item:hover img {
-                        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-                    }
-            
-                    /* Navigation Buttons */
-                    .prev, .next {
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        background: rgba(0, 0, 0, 0.6);
-                        color: white;
-                        border: none;
-                        cursor: pointer;
-                        font-size: 20px;
-                        padding: 10px;
-                        border-radius: 50%;
-                        z-index: 10;
-                    }
-            
-                    .prev { left: -40px; }
-                    .next { right: -40px; }
-            
-                    /* Footer */
-                    .footer {
-                        background: #222;
-                        color: #fff;
-                        text-align: center;
-                        padding: 20px 0;
-                        margin-top: 50px;
-                    }
-            
-                    .footer .footer-content {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        gap: 20px;
-                        max-width: 1000px;
-                        margin: auto;
-                        padding: 20px;
-                    }
-            
-                    .footer .footer-content div {
-                        flex: 1;
-                        min-width: 200px;
-                    }
-            
-                    .footer h4 {
-                        margin-bottom: 10px;
-                        font-size: 18px;
-                        text-transform: uppercase;
-                    }
-            
-                    .footer ul {
-                        list-style: none;
-                        padding: 0;
-                    }
-            
-                    .footer ul li {
-                        margin-bottom: 8px;
-                    }
-            
-                    .footer ul li a {
-                        color: #bbb;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                    }
-            
-                    .footer ul li a:hover {
-                        color: #fff;
-                    }
-            
-                    .footer .social-icons a {
-                        margin: 0 10px;
-                        display: inline-block;
-                        font-size: 20px;
-                        color: #bbb;
-                        transition: color 0.3s ease;
-                    }
-            
-                    .footer .social-icons a:hover {
-                        color: #fff;
-                    }
-            
-                    .footer .copyright {
-                        margin-top: 15px;
-                        font-size: 14px;
-                        color: #bbb;
-                    }
-            
-                    /* Responsive */
-                    @media (max-width: 768px) {
-                        .slider-item {
-                            width: 140px;
-                            height: 100px;
-                        }
-                        .prev, .next {
-                            font-size: 16px;
-                            padding: 8px;
-                        }
-                        .footer .footer-content {
-                            flex-direction: column;
-                            text-align: center;
-                        }
-                    }
                 </style>
             </head>
             <body>
-            
-            <!-- Team Section -->
-            <section id="team">
-                <div class="container">
-                    <h4 style="text-align:left;">TEAM</h4>
-                    <h2 style="text-align:center;">EPIC PEOPLE</h2>
-            
-                    <div class="slider-container">
-                        <div class="slider-wrapper">
-                            <button class="prev">&#10094;</button>
-                            <div class="slider">
-                                <div class="slider-item"><img src="./assets/img/teampic1.jpg" alt="Image 1"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic2.jpg" alt="Image 2"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic4.jpg" alt="Image 3"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic5.jpg" alt="Image 4"></div>
-                                <div class="slider-item"><img src="./assets/img/realbox6.jpg" alt="Image 5"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic1.jpg" alt="Image 1"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic2.jpg" alt="Image 2"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic4.jpg" alt="Image 3"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic5.jpg" alt="Image 4"></div>
-                                <div class="slider-item"><img src="./assets/img/realbox6.jpg" alt="Image 5"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic1.jpg" alt="Image 1"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic2.jpg" alt="Image 2"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic4.jpg" alt="Image 3"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic5.jpg" alt="Image 4"></div>
-                                <div class="slider-item"><img src="./assets/img/realbox6.jpg" alt="Image 5"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic1.jpg" alt="Image 1"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic2.jpg" alt="Image 2"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic4.jpg" alt="Image 3"></div>
-                                <div class="slider-item"><img src="./assets/img/teampic5.jpg" alt="Image 4"></div>
-                                <div class="slider-item"><img src="./assets/img/realbox6.jpg" alt="Image 5"></div>
-                            </div>
-                            <button class="next">&#10095;</button>
-                        </div>
-                    </div>
+
+<!-- Team Section -->
+<section id="team">
+    <div class="container">
+        <h4 style="text-align:left;">TEAM</h4>
+        <h2 style="text-align:center;">EPIC PEOPLE</h2>
+        <div class="slider-container">
+            <button class="prev">&#10094;</button>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="slider-item"><img src="./assets/img/teampic1.jpg" alt="Image 1"></div>
+                    <div class="slider-item"><img src="./assets/img/teampic2.jpg" alt="Image 2"></div>
+                    <div class="slider-item"><img src="./assets/img/teampic4.jpg" alt="Image 3"></div>
+                    <div class="slider-item"><img src="./assets/img/teampic5.jpg" alt="Image 4"></div>
+                    <div class="slider-item"><img src="./assets/img/realbox6.jpg" alt="Image 5"></div>
                 </div>
-            </section>
-            
-            <!-- Footer Section -->
-            <footer class="footer">
-                <div class="footer-content">
-                    <div>
-                        <h4>About Epic Spirit</h4>
-                        <p>Explore the world with Epic Spirit—your guide to breathtaking destinations and unforgettable journeys.</p>
-                    </div>
-                    <div>
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Destinations</a></li>
-                            <li><a href="#">Travel Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Follow Our Journey</h4>
-                        <div class="social-icons">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="copyright">
-                    &copy; 2025 Epic Spirit. Adventure Awaits!
-                </div>
-            </footer>
-            
-            <!-- Custom Slider JavaScript -->
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const slider = document.querySelector(".slider");
-                    const prevBtn = document.querySelector(".prev");
-                    const nextBtn = document.querySelector(".next");
-                    const scrollStep = 250;
-                    let autoScroll;
-            
-                    if (slider && prevBtn && nextBtn) {
-                        const scrollNext = () => {
-                            slider.scrollLeft + slider.clientWidth >= slider.scrollWidth
-                                ? slider.scrollTo({ left: 0, behavior: "smooth" })
-                                : slider.scrollBy({ left: scrollStep, behavior: "smooth" });
-                        };
-            
-                        const scrollPrev = () => {
-                            slider.scrollLeft <= 0
-                                ? slider.scrollTo({ left: slider.scrollWidth, behavior: "smooth" })
-                                : slider.scrollBy({ left: -scrollStep, behavior: "smooth" });
-                        };
-            
-                        const startAutoScroll = () => autoScroll = setInterval(scrollNext, 3000);
-                        const stopAutoScroll = () => clearInterval(autoScroll);
-            
-                        prevBtn.addEventListener("click", scrollPrev);
-                        nextBtn.addEventListener("click", scrollNext);
-                        slider.addEventListener("mouseenter", stopAutoScroll);
-                        slider.addEventListener("mouseleave", startAutoScroll);
-            
-                        startAutoScroll();
-                    }
-                });
-            </script>
-            
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<!-- Styles -->
+<style>
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 10px 0;
+    }
+
+    .slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .slider-item {
+        min-width: 300px;
+        flex-shrink: 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .slider-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        padding: 12px 18px;
+        cursor: pointer;
+        font-size: 22px;
+        border-radius: 50%;
+        z-index: 10;
+        transition: background 0.3s ease;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .prev:hover, .next:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    @media (max-width: 1024px) {
+        .slider-item { min-width: 250px; }
+    }
+
+    @media (max-width: 768px) {
+        .slider-item { min-width: 220px; }
+        .prev, .next { font-size: 18px; padding: 10px 14px; }
+    }
+
+    @media (max-width: 480px) {
+        .slider-item { min-width: 180px; }
+        .prev, .next { font-size: 16px; padding: 8px 12px; }
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const prevButton = document.querySelector(".prev");
+        const nextButton = document.querySelector(".next");
+        let autoScroll;
+
+        function scrollNext() {
+            slider.scrollBy({ left: slider.clientWidth, behavior: "smooth" });
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+                setTimeout(() => slider.scrollTo({ left: 0, behavior: "smooth" }), 500);
+            }
+        }
+
+        function scrollPrev() {
+            slider.scrollBy({ left: -slider.clientWidth, behavior: "smooth" });
+        }
+
+        function startAutoScroll() {
+            autoScroll = setInterval(scrollNext, 3000);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScroll);
+        }
+
+        prevButton.addEventListener("click", scrollPrev);
+        nextButton.addEventListener("click", scrollNext);
+        slider.addEventListener("mouseenter", stopAutoScroll);
+        slider.addEventListener("mouseleave", startAutoScroll);
+        startAutoScroll();
+    });
+</script>
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div>
+            <h4>About Epic Spirit</h4>
+            <p>Explore the world with Epic Spirit—your guide to breathtaking destinations and unforgettable journeys.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Travel Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Follow Our Journey</h4>
+            <div class="social-icons">
+                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2025 Epic Spirit. Adventure Awaits!
+    </div>
+</footer>
+
+<!-- Footer Styles -->
+<style>
+    .footer {
+        width: 100%;
+        background-color: #222;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .footer-content div {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .footer h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .footer ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer ul li {
+        margin: 5px 0;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .footer a:hover {
+        color: #ff9800;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        border-top: 1px solid #444;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+    }
+</style>
+
+<!-- JavaScript for Slider -->
+<script>
+    document.querySelector('.prev').addEventListener('click', function () {
+        document.querySelector('.slider').scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    document.querySelector('.next').addEventListener('click', function () {
+        document.querySelector('.slider').scrollBy({ left: 300, behavior: 'smooth' });
+    });
+</script>
